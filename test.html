@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <section>
+        <h1 class="title">Оформление заказа</h1>
+        <div class="main">
+            <div class="tabs-contents">
+                <ul id="tabs">
+                    <li class="tab active" onclick="tabs(this, 'newContent')">Я новый <br>покупатель</li>
+                    <li class="tab" onclick="tabs(this, 'oldContent')">Я зарегистрированный <br>покупатель</li>
+                </ul>
+                <div id="newContent" class="tab-content">
+                    <h3>Получатель заказа</h3>
+                    <form action="" method="">
+                        <div class="receiver">
+                            <dl>
+                                <dt>Имя и фамилия</dt>
+                                <dd><input type="text" name="" id=""></dd>
+                                <dt>Телефон</dt>
+                                <dd><input type="text" name="number" id=""></dd>
+                                <dt>Город</dt>
+                                <dd><input type="text" name="" id=""></dd>
+                                <dt>Эл. почта</dt>
+                                <dd><input type="email" name="" id=""></dd>
+                                <dd><a id="addComment">Добавить комментарий к заказу</a></dd>
+                                <div id="comm" style="display: none;">
+                                    <dt>Комментарий</dt>
+                                    <dd><textarea name="comment" cols="30" rows="10"></textarea></dd>
+                                </div>
+                            </dl>
+                        </div> 
+                        <div class="delivery">
+                            <dl>
+                                <dt><p>Доставка</p></dt>
+                                <dd>
+                                    <select name="deliveryType" id="deliveryType">
+                                        <option value="">«Новая почта» — 25 грн.</option>
+                                        <option value="">Курьером</option>
+                                    </select>
+                                </dd>
+                                <dt>Адрес склада</dt>
+                                <dd class="delivery-address">
+                                    <select name="deliveryAddress" id="deliveryAddress" class="address">
+                                        <option value="">Львов, Отделение №8 (до 30 кг): ул. Гетьмана И. Мазепы, 37</option>
+                                        <option value=""></option>
+                                    </select>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="payment">
+                            <dl>
+                                <dt><p>Оплата</p></dt>
+                                <dd>
+                                    <select name="paymentMethod" id="">
+                                        <option value="">Наложенный платеж</option>
+                                        <option value="">Предоплата</option>
+                                        <option value="">Безналичный расчет</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                        </div>
+                        <button type="submit">Оформить заказ</button>
+                    </form>
+                </div> 
+                <div id="oldContent" class="tab-content" style="display: none;">
+                    <form action="" method="">
+                        <dl>
+                            <dt>Логин</dt>
+                            <dd><input  name="login" id=""></dd>
+                            <dt>Пароль</dt>
+                            <dd><input type="password" name="password" id=""></dd>
+                        </dl>
+                        <button type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+            <div class="order">
+                <h3>Ваш заказ</h3>
+                <div class="item">
+                    <img src="./img/Layer72.png" alt="">
+                    <div class="item-wrapper">
+                        <a href="#">Цифровий фотоапарат Nikon D5100 kit (18-55 VR)</a>
+                        <div class="price">
+                            <p class="price-amount">6 568 грн. x 1 шт.</p>
+                            <p class="price-fullprice">6 568 грн.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./img/Layer71.png" alt="">
+                    <div class="item-wrapper">
+                        <a href="#">MP3-плеер Apple iPod Touch 5Gen 32Gb blue</a>
+                        <div class="price">
+                            <p class="price-amount">3 689 грн. x 1 шт.</p>
+                            <p class="price-fullprice">3 689 грн.</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="order-summ">9 769,15 грн.</h3>
+            </div>
+        </div>
+    </section>
+    <script src="./js/test.js"></script>
+</body>
+</html>
